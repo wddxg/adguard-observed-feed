@@ -1,9 +1,26 @@
 {
   "schema_version": 1,
-  "state": "proxy_verified_pending_router_switch",
+  "state": "deployed",
   "observed_snapshot": "20260805-171204",
   "profiler_service": "disabled_inactive",
   "github_repository": "https://github.com/wddxg/adguard-observed-feed",
   "proxy_subscription": "https://ghproxy.net/https://raw.githubusercontent.com/wddxg/adguard-observed-feed/main/dist/adguard-home.txt",
-  "router_deployed": false
+  "router_deployed": true,
+  "deployed_at": "2026-08-05T18:06:53+08:00",
+  "ax6000": {
+    "adguard_yaml_sha256": "8edbc2482195bea023c00b95e7d4a7f29b6b52a88a2ea729cd87dea8a924a1b3",
+    "active_filter_id": 2026080501,
+    "active_filter_sha256": "63d0c20d850031f8eaa5b7a29d5ea38ea070c8ceec169a14fc2673095bb77d53",
+    "active_filter_bytes": 942143,
+    "adguard_status": "running",
+    "dnsmasq_status": "running",
+    "easytier_status": "running",
+    "dnsmasq_port": 1745,
+    "dns_guard": "ADGUARD_HEALTHY",
+    "overlay_available_mib": 34.8,
+    "router_backup": "/root/adguard-observed-feed-20260805-175947",
+    "local_router_backup_archive": "ops/router-backup/adguard-observed-feed-20260805-175947.tgz",
+    "disabled_filter_archive": "ops/router-backup/adguard-disabled-filters-20260805.tgz",
+    "disabled_filter_archive_sha256": "8851ddcc705cfe47d0e2ada04d78744c1890508aa72c85501592e61e2ae40f0b"
+  }
 }
