@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "state": "building",
+  "observed_snapshot": "20260805-171204",
+  "profiler_service": "disabled_inactive",
+  "github_repository": null,
+  "proxy_subscription": null,
+  "router_deployed": false
+}
+

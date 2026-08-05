@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "build_id": "b99e1f009af96658c4012b921d4551781fffb6b7efa3d7a637e03ae49ce95316",
+  "observed": {
+    "sha256": "28819ff4ebbe34b32a08bfb3a0dafab8c50a253855fe028c45123cd1adbad084",
+    "domain_count": 866,
+    "total_hits": 227127,
+    "first_seen": "2026-07-29T14:16:36.972115633Z",
+    "last_seen": "2026-08-05T09:11:48.147685306Z"
+  },
+  "sources": [
+    {
+      "id": "hagezi-light",
+      "name": "HaGeZi Multi LIGHT",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/light.txt",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "GPL-3.0",
+      "bytes": 937214,
+      "sha256": "9b17ad5a0df07e1bf27d9765a0ef66fefb500df7dd1b57b176c6ef17e66d75a2",
+      "parsed_domains": 41958,
+      "observed_domains_covered": 696
+    },
+    {
+      "id": "adaway",
+      "name": "AdAway default blocklist",
+      "url": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "homepage": "https://github.com/AdAway/adaway.github.io",
+      "license": "CC-BY-3.0",
+      "bytes": 243454,
+      "sha256": "8c925c37a5eaa5e1c582c76e12301797861addee5ad0fa0e6e46c9dd0136fe55",
+      "parsed_domains": 6540,
+      "observed_domains_covered": 82
+    },
+    {
+      "id": "perflyst-smarttv",
+      "name": "Perflyst Smart-TV Blocklist",
+      "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "MIT",
+      "bytes": 12118,
+      "sha256": "7a88a832fa6e63ca97e22a764f605a835ceab1400a36c433f8963e866b6c26f6",
+      "parsed_domains": 245,
+      "observed_domains_covered": 2
+    }
+  ],
+  "public": {
+    "unique_domains_before_parent_collapse": 47183,
+    "rules_after_parent_collapse": 42031,
+    "redundant_subdomains_removed": 5152,
+    "observed_domains_covered": 708
+  },
+  "supplement": {
+    "observed_domains_not_covered_by_public_rules": 158
+  },
+  "output": {
+    "rules": 42185,
+    "redundant_subdomains_removed_during_merge": 4,
+    "bytes": 942143,
+    "sha256": "63d0c20d850031f8eaa5b7a29d5ea38ea070c8ceec169a14fc2673095bb77d53"
+  }
+}

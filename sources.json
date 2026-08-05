@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "hagezi-light",
+      "name": "HaGeZi Multi LIGHT",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/light.txt",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "GPL-3.0",
+      "format": "adblock",
+      "min_domains": 20000,
+      "max_domains": 60000,
+      "max_bytes": 2000000
+    },
+    {
+      "id": "adaway",
+      "name": "AdAway default blocklist",
+      "url": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "homepage": "https://github.com/AdAway/adaway.github.io",
+      "license": "CC-BY-3.0",
+      "format": "hosts",
+      "min_domains": 5000,
+      "max_domains": 20000,
+      "max_bytes": 1000000
+    },
+    {
+      "id": "perflyst-smarttv",
+      "name": "Perflyst Smart-TV Blocklist",
+      "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt",
+      "homepage": "https://github.com/Perflyst/PiHoleBlocklist",
+      "license": "MIT",
+      "format": "domains",
+      "min_domains": 100,
+      "max_domains": 2000,
+      "max_bytes": 200000
+    }
+  ]
+}
