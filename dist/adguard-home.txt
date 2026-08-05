@@ -1,11 +1,11 @@
 [Adblock Plus]
-! Title: Observed Home DNS Blocklist
-! Homepage: https://github.com/wddxg/adguard-observed-feed
-! Description: Observed AX6000 hits plus lightweight public DNS blocklists.
-! License: GPL-3.0; bundled source data retains its upstream license.
-! Expires: 7 days
-! Rules: 42185
-! Observed domains represented: 866
+! 标题：观察域名 DNS 拦截列表
+! 项目：https://github.com/wddxg/adguard-observed-feed
+! 说明：由匿名化命中统计和轻量公开规则合并生成。
+! 许可证：GPL-3.0；合并来源保留原许可证。
+! 更新周期：7 天
+! 规则数：42185
+! 匿名统计域名数：866
 !
 ||0-0-0checkmate.com^
 ||0.0-02.net^

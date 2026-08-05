@@ -1,12 +1,10 @@
 {
   "schema_version": 1,
-  "build_id": "b99e1f009af96658c4012b921d4551781fffb6b7efa3d7a637e03ae49ce95316",
+  "build_id": "4c315bb27b218e3caf47ff38796adac06f91c278b64679a3bf82e88e708f1c25",
   "observed": {
-    "sha256": "28819ff4ebbe34b32a08bfb3a0dafab8c50a253855fe028c45123cd1adbad084",
+    "sha256": "c68750668e284d2212814a046d85189055b79f850795865a54a7bb4ac8246229",
     "domain_count": 866,
-    "total_hits": 227127,
-    "first_seen": "2026-07-29T14:16:36.972115633Z",
-    "last_seen": "2026-08-05T09:11:48.147685306Z"
+    "total_hits": 227127
   },
   "sources": [
     {
@@ -55,7 +53,7 @@
   "output": {
     "rules": 42185,
     "redundant_subdomains_removed_during_merge": 4,
-    "bytes": 942143,
-    "sha256": "63d0c20d850031f8eaa5b7a29d5ea38ea070c8ceec169a14fc2673095bb77d53"
+    "bytes": 942134,
+    "sha256": "b63b214b799a472cd89f3807c80846f42fea484668aa001f9105a796dbda8da0"
   }
 }

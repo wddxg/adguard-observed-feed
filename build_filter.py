@@ -93,11 +93,16 @@ def fetch_source(source: dict, cache_dir: pathlib.Path) -> tuple[bytes, pathlib.
     return data, target
 
 
+def observed_sort_key(domain: str) -> tuple[str, str, str]:
+    labels = domain.lower().strip(".").split(".")
+    if len(labels) >= 2:
+        return (labels[-2], labels[-1], domain.lower())
+    return (domain.lower(), "", domain.lower())
+
+
 def load_observed(path: pathlib.Path) -> tuple[set[str], dict]:
     domains: set[str] = set()
     total_hits = 0
-    first_seen = None
-    last_seen = None
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         for row in csv.DictReader(handle):
             domain = normalize_domain(row.get("domain", ""))
@@ -105,16 +110,10 @@ def load_observed(path: pathlib.Path) -> tuple[set[str], dict]:
                 raise ValueError(f"invalid observed domain: {row.get('domain')!r}")
             domains.add(domain)
             total_hits += int(row.get("hit_count", "0"))
-            row_first = row.get("first_seen") or None
-            row_last = row.get("last_seen") or None
-            first_seen = min(filter(None, (first_seen, row_first)), default=None)
-            last_seen = max(filter(None, (last_seen, row_last)), default=None)
     return domains, {
         "sha256": sha256_bytes(path.read_bytes()),
         "domain_count": len(domains),
         "total_hits": total_hits,
-        "first_seen": first_seen,
-        "last_seen": last_seen,
     }
 
 
@@ -178,13 +177,13 @@ def build(
 
     header = [
         "[Adblock Plus]",
-        "! Title: Observed Home DNS Blocklist",
-        "! Homepage: https://github.com/wddxg/adguard-observed-feed",
-        "! Description: Observed AX6000 hits plus lightweight public DNS blocklists.",
-        "! License: GPL-3.0; bundled source data retains its upstream license.",
-        "! Expires: 7 days",
-        f"! Rules: {len(merged)}",
-        f"! Observed domains represented: {len(observed)}",
+        "! 标题：观察域名 DNS 拦截列表",
+        "! 项目：https://github.com/wddxg/adguard-observed-feed",
+        "! 说明：由匿名化命中统计和轻量公开规则合并生成。",
+        "! 许可证：GPL-3.0；合并来源保留原许可证。",
+        "! 更新周期：7 天",
+        f"! 规则数：{len(merged)}",
+        f"! 匿名统计域名数：{len(observed)}",
         "!",
     ]
     content = "\n".join(header + [f"||{domain}^" for domain in sorted(merged)]) + "\n"

@@ -1,4 +1,4 @@
-name: Build filter
+name: 每周更新拦截列表
 
 on:
   workflow_dispatch:
@@ -8,27 +8,37 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: weekly-filter-build
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Test
+
+      - name: 运行测试
         run: python -m unittest discover -s tests -v
-      - name: Build
+
+      - name: 重新生成订阅
         run: python build_filter.py
-      - name: Commit refreshed output
+
+      - name: 提交变化
+        shell: bash
         run: |
           git add dist/adguard-home.txt dist/build-report.json
           if git diff --cached --quiet; then
-            echo "No source changes"
+            echo "订阅没有变化"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Refresh public filter sources"
+          git commit -m "每周更新拦截列表"
           git push
-
