@@ -1,10 +1,9 @@
 {
   "schema_version": 1,
-  "state": "building",
+  "state": "proxy_verified_pending_router_switch",
   "observed_snapshot": "20260805-171204",
   "profiler_service": "disabled_inactive",
-  "github_repository": null,
-  "proxy_subscription": null,
+  "github_repository": "https://github.com/wddxg/adguard-observed-feed",
+  "proxy_subscription": "https://ghproxy.net/https://raw.githubusercontent.com/wddxg/adguard-observed-feed/main/dist/adguard-home.txt",
   "router_deployed": false
 }
-

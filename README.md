@@ -13,9 +13,11 @@ The complete SQLite profiler archive is intentionally excluded from GitHub.
 
 ## Subscription
 
-AdGuard Home should use the China-friendly GitHub Raw proxy URL verified in
-`dist/deployment.json`. Do not use that URL until the file records a successful
-router-side length and SHA-256 check.
+AdGuard Home uses the China-friendly GitHub Raw proxy URL verified from
+Windows, FN100, and the AX6000 itself. The expected length and SHA-256 are
+recorded in `dist/deployment.json`:
+
+`https://ghproxy.net/https://raw.githubusercontent.com/wddxg/adguard-observed-feed/main/dist/adguard-home.txt`
 
 Canonical file:
 
