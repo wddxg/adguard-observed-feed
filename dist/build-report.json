@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "build_id": "f76e06c499409f9ef473a8a2eb7ded014ae0463d9b55e66f9237ee32c0eccb07",
+  "build_id": "f9a9ca9407a8f368c3e19bafa532db25c318554233bb89397858b6f2be862061",
   "observed": {
     "sha256": "c68750668e284d2212814a046d85189055b79f850795865a54a7bb4ac8246229",
     "domain_count": 866,
@@ -13,10 +13,10 @@
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/light.txt",
       "homepage": "https://github.com/hagezi/dns-blocklists",
       "license": "GPL-3.0",
-      "bytes": 922606,
-      "sha256": "789fa000d0673879c47173b0d1cb38df30965fd0938d2c4753474bc8372de8e1",
-      "parsed_domains": 41338,
-      "observed_domains_covered": 699
+      "bytes": 915061,
+      "sha256": "dfb416183b55aaa6c5bf50084ebafbe68e05f98666e3a2f341522dbbec675e95",
+      "parsed_domains": 40961,
+      "observed_domains_covered": 706
     },
     {
       "id": "adaway",
@@ -42,18 +42,18 @@
     }
   ],
   "public": {
-    "unique_domains_before_parent_collapse": 46577,
-    "rules_after_parent_collapse": 41472,
-    "redundant_subdomains_removed": 5105,
-    "observed_domains_covered": 711
+    "unique_domains_before_parent_collapse": 46191,
+    "rules_after_parent_collapse": 41101,
+    "redundant_subdomains_removed": 5090,
+    "observed_domains_covered": 718
   },
   "supplement": {
-    "observed_domains_not_covered_by_public_rules": 155
+    "observed_domains_not_covered_by_public_rules": 148
   },
   "output": {
-    "rules": 41623,
+    "rules": 41245,
     "redundant_subdomains_removed_during_merge": 4,
-    "bytes": 929052,
-    "sha256": "0c5d3a74be5344eab48e0ad6d48daa618eff56134b03c43be0c56a1cd30f8609"
+    "bytes": 921399,
+    "sha256": "ab0238c88c6f68e13e4c334af5995cbd709a3155f69807b942894ba6b71eb502"
   }
 }
